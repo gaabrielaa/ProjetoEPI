@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>APIprojeto</name>
+    </assembly>
+    <members>
+        <member name="M:APIprojeto.Controllers.CadastroController.GetCadastros">
+            <summary>
+            Busca os dados já existentes
+            </summary>
+            <remarks>
+            Sample request:
+            
+               Get do cadastro os dados retornados serão:
+               {
+               "codEpi": 0, --código do EPI
+               "nome": "string", --nome do EPI
+               "usuEpi": "string", --descrição de como usar o EPI
+               }
+            </remarks>
+            <response code="200"> Sucesso no retorno dos dados</response>
+        </member>
+        <member name="M:APIprojeto.Controllers.CadastroController.GetCadastro(System.Int32)">
+            <summary>
+            Alteração conforme dados passados para o id informado
+            </summary>
+            /// <remarks>
+            Sample request:
+            
+               Get do cadastro os dados retornados serão:
+               {
+               "codEpi": 0, --código do EPI
+               "nome": "string", --nome do EPI
+               "usuEpi": "string", --descrição de como usar o EPI
+               }
+            </remarks>
+            <response code="200"> Sucesso no retorno dos dados</response>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APIprojeto.Controllers.CadastroController.PutCadastro(System.Int32,APIprojeto.Models.Cadastro)">
+            <summary>
+            Altera os dados para o Id informado, conforme dados passados
+            </summary>
+            <remarks>
+            Sample request:
+            
+               Put do cadastro, vc deve imformar os valores comforme no exemplo abaixo:
+               {
+               "codEpi": 0, --código do EPI
+               "nome": "string", --nome do EPI
+               "usuEpi": "string", --descrição de como usar o EPI
+               }
+            </remarks>
+            <response code="200"> Sucesso no retorno dos dados</response>
+            <param name="id"></param>
+            <param name="cadastro"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APIprojeto.Controllers.CadastroController.PostCadastro(APIprojeto.Models.Cadastro)">
+            <summary>
+            Postagem do cadastro/insere os dados(cadastro)
+            </summary>
+            /// <remarks>
+            Sample request:
+            
+               Post do cadastro os dados retornados serão
+               {
+               "codEpi": 0, --código do EPI
+               "nome": "string", --nome do EPI
+               "usuEpi": "string", --descrição de como usar o EPI
+               }
+            </remarks>
+            <response code="200"> Sucesso no retorno dos dados</response>
+            <param name="cadastro"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APIprojeto.Controllers.CadastroController.DeleteCadastro(System.Int32)">
+            <summary>
+            Deletar dados do cadastro conforme ID informado
+            </summary>
+            <response code="200"> Sucesso no retorno dos dados</response>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APIprojeto.Controllers.ColaboradorController.GetColaboradors">
+            <summary>
+            Busca os dados já existentes
+            </summary>
+            <remarks>
+            Sample request:
+            
+               Get do cadastro os dados retornados serão:
+               {
+               "codCol": 0, --Código do colaborador
+               "nome": "string", --Nome do colaborador
+               "ctps": "string", --Ctps do colaborador
+               "dtAdm": "2024-04-25", --Data de adimição do colaborador
+               "tel": 0, --Telefone do colaborador
+               "cpf": 0, --Cpf do colaborador
+               }
+            </remarks>
+            <response code="200"> Sucesso no retorno dos dados</response>
+        </member>
+        <member name="M:APIprojeto.Controllers.ColaboradorController.GetColaborador(System.Int32)">
+            <summary>
+            Alteração conforme dados passados para o id informado
+            </summary>
+            /// <remarks>
+            Sample request:
+            
+               Get do cadastro os dados retornados serão:
+               {
+               "codCol": 0, --Código do colaborador
+               "nome": "string", --Nome do colaborador
+               "ctps": "string", --Ctps do colaborador
+               "dtAdm": "2024-04-25", --Data de adimição do colaborador
+               "tel": 0, --Telefone do colaborador
+               "cpf": 0, --Cpf do colaborador
+               }
+            </remarks>
+            <response code="200"> Sucesso no retorno dos dados</response>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APIprojeto.Controllers.ColaboradorController.PutColaborador(System.Int32,APIprojeto.Models.Colaborador)">
+            <summary>
+            Altera os dados para o Id informado, conforme dados passados
+            </summary>
+            <remarks>
+            Sample request:
+            
+               Put do cadastro, vc deve imformar os valores comforme no exemplo abaixo:
+               {
+               "codCol": 0, --Código do colaborador
+               "nome": "string", --Nome do colaborador
+               "ctps": "string", --Ctps do colaborador
+               "dtAdm": "2024-04-25", --Data de adimição do colaborador
+               "tel": 0, --Telefone do colaborador
+               "cpf": 0, --Cpf do colaborador
+               }
+            </remarks>
+            <response code="200"> Sucesso no retorno dos dados</response>
+            <param name="id"></param>
+            <param name="colaborador"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APIprojeto.Controllers.ColaboradorController.PostColaborador(APIprojeto.Models.Colaborador)">
+            <summary>
+            Postagem do cadastro/insere os dados(cadastro)
+            </summary>
+            /// <remarks>
+            Sample request:
+            
+               Post do cadastro os dados retornados serão
+               {
+               "codCol": 0, --Código do colaborador
+               "nome": "string", --Nome do colaborador
+               "ctps": "string", --Ctps do colaborador
+               "dtAdm": "2024-04-25", --Data de adimição do colaborador
+               "tel": 0, --Telefone do colaborador
+               "cpf": 0, --Cpf do colaborador
+               }
+            </remarks>
+            <response code="200"> Sucesso no retorno dos dados</response>
+            <param name="colaborador"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APIprojeto.Controllers.ColaboradorController.DeleteColaborador(System.Int32)">
+            <summary>
+            Deletar dados do cadastro conforme Id informado
+            </summary>
+            <response code="200"> Sucesso no retorno dos dados</response>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APIprojeto.Controllers.EntregaController.GetEntregas">
+            <summary>
+            Busca os dados já existentes
+            </summary>
+            <remarks>
+            Sample request:
+            
+               Get do cadastro os dados retornados serão:
+               {
+               "codEntrega": 0, --Código da entrega
+               "codCol": 0, --código do colaborador
+               "codEpi": 0, --códico do EPI
+               "dtVal": "2024-04-25", --data de validade do EPI
+               "dtEntrega": "2024-04-25", --Data de entrega do EPI
+               }
+            </remarks>
+            <response code="200"> Sucesso no retorno dos dados</response>
+        </member>
+        <member name="M:APIprojeto.Controllers.EntregaController.GetEntrega(System.Int32)">
+            <summary>
+            Alteração conforme dados passados para o id informado
+            </summary>
+            /// <remarks>
+            Sample request:
+            
+               Get do cadastro os dados retornados serão:
+               {
+               "codEntrega": 0, --Código da entrega
+               "codCol": 0, --código do colaborador
+               "codEpi": 0, --códico do EPI
+               "dtVal": "2024-04-25", --data de validade do EPI
+               "dtEntrega": "2024-04-25", --Data de entrega do EPI
+               }
+            </remarks>
+            <response code="200"> Sucesso no retorno dos dados</response>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APIprojeto.Controllers.EntregaController.PutEntrega(System.Int32,APIprojeto.Models.Entrega)">
+            <summary>
+            Altera os dados para o Id informado, conforme dados passados
+            </summary>
+            <remarks>
+            Sample request:
+            
+               Put do cadastro, vc deve imformar os valores comforme no exemplo abaixo:
+               {
+               "codEntrega": 0, --Código da entrega
+               "codCol": 0, --código do colaborador
+               "codEpi": 0, --códico do EPI
+               "dtVal": "2024-04-25", --data de validade do EPI
+               "dtEntrega": "2024-04-25", --Data de entrega do EPI
+               }
+            </remarks>
+            <response code="200"> Sucesso no retorno dos dados</response>
+            <param name="id"></param>
+            <param name="entrega"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APIprojeto.Controllers.EntregaController.PostEntrega(APIprojeto.Models.Entrega)">
+            <summary>
+            Postagem do cadastro/insere os dados(cadastro)
+            </summary>
+            /// <remarks>
+            Sample request:
+            
+               Post do cadastro os dados retornados serão
+               {
+               "codEntrega": 0, --Código da entrega
+               "codCol": 0, --código do colaborador
+               "codEpi": 0, --códico do EPI
+               "dtVal": "2024-04-25", --data de validade do EPI
+               "dtEntrega": "2024-04-25", --Data de entrega do EPI
+               }
+            </remarks>
+            <response code="200"> Sucesso no retorno dos dados</response>
+            <param name="entrega"></param>
+            <returns></returns>
+        </member>
+        <member name="M:APIprojeto.Controllers.EntregaController.DeleteEntrega(System.Int32)">
+            <summary>
+            Deletar dados do cadastro conforme Id informado
+            </summary>
+            <response code="200"> Sucesso no retorno dos dados</response>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
