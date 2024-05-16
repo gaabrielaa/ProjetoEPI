@@ -83,4 +83,24 @@ new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
     }
  
+ [HttpPost("Login")]
+    public async Task<ActionResult<UserToken>> Login([FromBody] UserInfo
+    userInfo)
+    {
+        var result = await
+        _signInManager.PasswordSignInAsync(userInfo.Email, userInfo.Password,
+        isPersistent: false, lockoutOnFailure: false);
+        if (result.Succeeded)
+        {
+            var user = await
+        _userManager.FindByNameAsync(userInfo.Email);
+            var roles = await _userManager.GetRolesAsync(user);
+            return BuildToken(userInfo, roles);
+        }
+        else
+        {
+            ModelState.AddModelError(string.Empty, "login inválido.");
+            return BadRequest(ModelState);
+        }
+    }
 }
