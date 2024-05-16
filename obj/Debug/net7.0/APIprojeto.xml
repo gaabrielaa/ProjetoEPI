@@ -261,5 +261,17 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:APIprojeto.Migrations.identity">
+            <inheritdoc />
+        </member>
+        <member name="M:APIprojeto.Migrations.identity.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APIprojeto.Migrations.identity.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:APIprojeto.Migrations.identity.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
     </members>
 </doc>

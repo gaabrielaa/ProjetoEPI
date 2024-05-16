@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using APIprojeto.Context;
 using APIprojeto.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace APIprojeto.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CadastroController : ControllerBase
     {
         private readonly AppDbContext _context;
@@ -64,6 +66,7 @@ namespace APIprojeto.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<Cadastro>> GetCadastro(int id)
         {
           if (_context.Cadastros == null)
@@ -100,6 +103,7 @@ namespace APIprojeto.Controllers
         /// <param name="cadastro"></param>
         /// <returns></returns>
         [HttpPut("{id}")]
+        [Authorize("Admin")]
         public async Task<IActionResult> PutCadastro(int id, Cadastro cadastro)
         {
             if (id != cadastro.CodEpi)
@@ -147,6 +151,7 @@ namespace APIprojeto.Controllers
         /// <param name="cadastro"></param>
         /// <returns></returns>
         [HttpPost]
+        [Authorize("Admin")]
         public async Task<ActionResult<Cadastro>> PostCadastro(Cadastro cadastro)
         {
           if (_context.Cadastros == null)
@@ -167,6 +172,7 @@ namespace APIprojeto.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("{id}")]
+        [Authorize("Admin")]
         public async Task<IActionResult> DeleteCadastro(int id)
         {
             if (_context.Cadastros == null)

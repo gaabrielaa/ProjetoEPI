@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using APIprojeto.Context;
 using APIprojeto.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace APIprojeto.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize("Admin")]
     public class ColaboradorController : ControllerBase
     {
         private readonly AppDbContext _context;
@@ -70,6 +72,7 @@ namespace APIprojeto.Controllers
         /// <returns></returns>
         // GET: api/Colaborador/5
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<Colaborador>> GetColaborador(int id)
         {
           if (_context.Colaboradors == null)
@@ -109,6 +112,7 @@ namespace APIprojeto.Controllers
         /// <param name="colaborador"></param>
         /// <returns></returns>
         [HttpPut("{id}")]
+        [Authorize("Admin")]
         public async Task<IActionResult> PutColaborador(int id, Colaborador colaborador)
         {
             if (id != colaborador.CodCol)
@@ -159,6 +163,7 @@ namespace APIprojeto.Controllers
         /// <param name="colaborador"></param>
         /// <returns></returns>
         [HttpPost]
+        [Authorize("Admin")]
         public async Task<ActionResult<Colaborador>> PostColaborador(Colaborador colaborador)
         {
           if (_context.Colaboradors == null)
@@ -179,6 +184,7 @@ namespace APIprojeto.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpDelete("{id}")]
+        [Authorize("Admin")]
         public async Task<IActionResult> DeleteColaborador(int id)
         {
             if (_context.Colaboradors == null)

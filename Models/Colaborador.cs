@@ -17,6 +17,7 @@ public partial class Colaborador
     public int? Tel { get; set; }
 
     public decimal Cpf { get; set; }
+    public string? Email { get; set; }
 
 [JsonIgnore]
     public virtual ICollection<Entrega> Entregas { get; } = new List<Entrega>();

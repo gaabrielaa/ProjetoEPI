@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using APIprojeto.Context;
 using APIprojeto.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace APIprojeto.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize("Admin")]
     public class EntregaController : ControllerBase
     {
         private readonly AppDbContext _context;
@@ -68,6 +70,7 @@ namespace APIprojeto.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<ActionResult<Entrega>> GetEntrega(int id)
         {
             if (_context.Entregas == null)

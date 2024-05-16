@@ -280,3 +280,7 @@ C:\Users\Aluno Dev\Documents\DEV\APIprojeto\obj\Debug\net7.0\APIprojeto.genrunti
 C:\Users\Aluno Dev\Documents\DEV\APIprojeto\obj\Debug\net7.0\ref\APIprojeto.dll
 C:\Users\Aluno Dev\Documents\DEV\APIprojeto\bin\Debug\net7.0\APIprojeto.xml
 C:\Users\Aluno Dev\Documents\DEV\APIprojeto\obj\Debug\net7.0\APIprojeto.xml
+C:\Users\Aluno Dev\Documents\DEV\APIprojeto\bin\Debug\net7.0\APIprojeto.staticwebassets.runtime.json
+C:\Users\Aluno Dev\Documents\DEV\APIprojeto\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Aluno Dev\Documents\DEV\APIprojeto\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Aluno Dev\Documents\DEV\APIprojeto\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll

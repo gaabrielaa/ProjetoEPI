@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using APIprojeto.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace APIprojeto.Context;
 
-public partial class AppDbContext : DbContext
+public partial class AppDbContext : IdentityDbContext<ApplicationUser>
 {
-    public AppDbContext()
-    {
-    }
-
+   
     public AppDbContext(DbContextOptions<AppDbContext> options)
         : base(options)
     {
@@ -73,6 +71,9 @@ public partial class AppDbContext : DbContext
                 .HasMaxLength(100)
                 .HasColumnName("nome");
             entity.Property(e => e.Tel).HasColumnName("tel");
+            entity.Property(e => e.Email)
+                .HasMaxLength(100)
+                .HasColumnName("email");
         });
 
         modelBuilder.Entity<Entrega>(entity =>
@@ -102,7 +103,7 @@ public partial class AppDbContext : DbContext
                 .HasConstraintName("entrega_cod_epi_fkey");
         });
 
-        OnModelCreatingPartial(modelBuilder);
+        base.OnModelCreating(modelBuilder);
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
